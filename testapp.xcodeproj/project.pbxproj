@@ -13,6 +13,7 @@
 		7418BAF1193D5F1800F47A7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7418BAF0193D5F1800F47A7F /* Images.xcassets */; };
 		7418BAF4193D5F1800F47A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7418BAF2193D5F1800F47A7F /* Main.storyboard */; };
 		7418BB00193D5F1800F47A7F /* testappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7418BAFF193D5F1800F47A7F /* testappTests.swift */; };
+		74978A1B193D7D720025EF60 /* libnhk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74978A18193D7D5D0025EF60 /* libnhk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +23,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7418BAE4193D5F1800F47A7F;
 			remoteInfo = testapp;
+		};
+		74978A17193D7D5D0025EF60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74978A12193D7D5C0025EF60 /* libnhk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 749789F6193D7D5C0025EF60;
+			remoteInfo = libnhk;
+		};
+		74978A19193D7D5D0025EF60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74978A12193D7D5C0025EF60 /* libnhk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 74978A01193D7D5C0025EF60;
+			remoteInfo = libnhkTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +51,8 @@
 		7418BAF9193D5F1800F47A7F /* testappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7418BAFE193D5F1800F47A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7418BAFF193D5F1800F47A7F /* testappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappTests.swift; sourceTree = "<group>"; };
+		7418BB09193D5FBA00F47A7F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		74978A12193D7D5C0025EF60 /* libnhk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libnhk.xcodeproj; path = libnhk/libnhk.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74978A1B193D7D720025EF60 /* libnhk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		7418BADC193D5F1800F47A7F = {
 			isa = PBXGroup;
 			children = (
+				74978A12193D7D5C0025EF60 /* libnhk.xcodeproj */,
 				7418BAE7193D5F1800F47A7F /* testapp */,
 				7418BAFC193D5F1800F47A7F /* testappTests */,
 				7418BAE6193D5F1800F47A7F /* Products */,
@@ -91,6 +110,7 @@
 			children = (
 				7418BAE9193D5F1800F47A7F /* Info.plist */,
 				7418BAEA193D5F1800F47A7F /* main.swift */,
+				7418BB09193D5FBA00F47A7F /* MyPlayground.playground */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -110,6 +130,15 @@
 				7418BAFE193D5F1800F47A7F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74978A13193D7D5C0025EF60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74978A18193D7D5D0025EF60 /* libnhk.framework */,
+				74978A1A193D7D5D0025EF60 /* libnhkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +208,12 @@
 			mainGroup = 7418BADC193D5F1800F47A7F;
 			productRefGroup = 7418BAE6193D5F1800F47A7F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 74978A13193D7D5C0025EF60 /* Products */;
+					ProjectRef = 74978A12193D7D5C0025EF60 /* libnhk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7418BAE4193D5F1800F47A7F /* testapp */,
@@ -186,6 +221,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		74978A18193D7D5D0025EF60 /* libnhk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libnhk.framework;
+			remoteRef = 74978A17193D7D5D0025EF60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		74978A1A193D7D5D0025EF60 /* libnhkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = libnhkTests.xctest;
+			remoteRef = 74978A19193D7D5D0025EF60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7418BAE3193D5F1800F47A7F /* Resources */ = {
@@ -403,6 +455,7 @@
 				7418BB05193D5F1800F47A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7418BB06193D5F1800F47A7F /* Build configuration list for PBXNativeTarget "testappTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +464,7 @@
 				7418BB08193D5F1800F47A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

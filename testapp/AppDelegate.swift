@@ -7,13 +7,17 @@
 //
 
 import Cocoa
+import libnhk
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var myNews:NHKEasyNews
                             
-
+    init() {
+        myNews = NHKEasyNews()
+    }
 
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
-        // Insert code here to initialize your application
+        println("app did finish launching")
     }
 
     func applicationWillTerminate(aNotification: NSNotification?) {
