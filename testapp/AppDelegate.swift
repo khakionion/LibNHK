@@ -10,11 +10,6 @@ import Cocoa
 import libnhk
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var myNews:NHKEasyNews
-                            
-    init() {
-        myNews = NHKEasyNews()
-    }
 
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         println("app did finish launching")

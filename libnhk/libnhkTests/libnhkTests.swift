@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import libnhk
 
 class libnhkTests: XCTestCase {
     
@@ -21,17 +22,16 @@ class libnhkTests: XCTestCase {
     }
     
     func testArticleLoading() {
-        let bundle:NSBundle = NSBundle.mainBundle()
-        let testURL:NSURL = bundle.URLForResource(named:"news-list.json")
-        let newsObj:NHKEasyNews = NHKEasyNews(URL:testURL)
-        XCTAssert((newsObj.dataCache != nil))
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+        var nhkBundle:NSBundle? = nil
+        var fwList = NSBundle.allFrameworks()
+        for nextFramework:AnyObject in fwList {
+            println(nextFramework)
         }
-    }
-    
+        //let testURL:NSURL = bundle.URLForResource("news-list", withExtension:"json")
+        let testData:NSData = NSData(contentsOfFile:"/Users/michaelh/Desktop/news-list.json")
+        let newsObj:NHKEasyNews = NHKEasyNews(data:testData)
+        XCTAssert((newsObj.articleStore != nil))
+        XCTAssert(newsObj.articleStore!.count > 0)
+        println(newsObj.articleStore)
+    }    
 }

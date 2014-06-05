@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74343068193EB6920054C49D /* NHKArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74343067193EB6920054C49D /* NHKArticle.swift */; };
 		749789FC193D7D5C0025EF60 /* libnhk.h in Headers */ = {isa = PBXBuildFile; fileRef = 749789FB193D7D5C0025EF60 /* libnhk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74978A02193D7D5C0025EF60 /* libnhk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749789F6193D7D5C0025EF60 /* libnhk.framework */; };
 		74978A09193D7D5C0025EF60 /* libnhkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74978A08193D7D5C0025EF60 /* libnhkTests.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74343067193EB6920054C49D /* NHKArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKArticle.swift; sourceTree = "<group>"; };
 		749789F6193D7D5C0025EF60 /* libnhk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libnhk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		749789FA193D7D5C0025EF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749789FB193D7D5C0025EF60 /* libnhk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libnhk.h; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 		74978A08193D7D5C0025EF60 /* libnhkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libnhkTests.swift; sourceTree = "<group>"; };
 		74978A1C193D7DA60025EF60 /* NHKEasyNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKEasyNews.swift; sourceTree = "<group>"; };
 		7498A213193EA3F000FCB309 /* news-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "news-list.json"; sourceTree = "<group>"; };
+		74F46C11193EED1400F0EEA1 /* NHKPlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NHKPlay.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 				749789FB193D7D5C0025EF60 /* libnhk.h */,
 				749789F9193D7D5C0025EF60 /* Supporting Files */,
 				74978A1C193D7DA60025EF60 /* NHKEasyNews.swift */,
+				74343067193EB6920054C49D /* NHKArticle.swift */,
 			);
 			path = libnhk;
 			sourceTree = "<group>";
@@ -96,6 +100,7 @@
 			children = (
 				74978A08193D7D5C0025EF60 /* libnhkTests.swift */,
 				74978A06193D7D5C0025EF60 /* Supporting Files */,
+				74F46C11193EED1400F0EEA1 /* NHKPlay.playground */,
 			);
 			path = libnhkTests;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74343068193EB6920054C49D /* NHKArticle.swift in Sources */,
 				74978A1D193D7DA60025EF60 /* NHKEasyNews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
