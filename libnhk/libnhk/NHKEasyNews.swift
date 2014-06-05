@@ -35,6 +35,7 @@ class NHKEasyNews: NSObject {
         let innerDict:ArticleCatalog = newsArrayWrapper[0] as ArticleCatalog
         var returnArray = NHKArticle[]()
         for (date, articleArray) in innerDict {
+            print("in \(date) there are \(articleArray.count) articles")
             for nextArticle:ArticleEntry in articleArray {
                 let info:NHKArticle.NHKArticleInfo = NHKArticle.NHKArticleInfo(permalink: NSURL(string:nextArticle["news_web_url"]),
                     title:nextArticle["title"]!,
@@ -42,7 +43,9 @@ class NHKEasyNews: NSObject {
                     identifier:nextArticle["news_id"]!)
                 let article:NHKArticle = NHKArticle(info: info)
                 returnArray.append(article)
+                print(".")
             }
+            print("\n")
         }
         articleStore = returnArray
     }
