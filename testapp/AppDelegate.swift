@@ -12,7 +12,6 @@ import libnhk
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
-        println("app did finish launching")
     }
 
     func applicationWillTerminate(aNotification: NSNotification?) {

@@ -5,7 +5,7 @@
 //  Created by Michael Herring on 2014/06/03.
 //  Copyright (c) 2014年 Michael Herring. All rights reserved.
 //
-import Cocoa
+
 import Foundation
 
 typealias ArticleCatalog = Dictionary<String,ArticleEntry[]>
@@ -15,15 +15,11 @@ class NHKEasyNews: NSObject {
     var dataCache: NSData
     var articleStore: Array<NHKArticle>?
     init(data:NSData) {
+        assert(data != nil, "Attempting to init NHKEasyNews with nil data.")
         dataCache = data
         articleStore = Array<NHKArticle>()
         super.init()
-        if data != nil {
-            self.processData(dataCache)
-        }
-        else {
-            println("Inited NHKEasyNews with nil data.")
-        }
+        self.processData(dataCache)
     }
     convenience init(URL url:NSURL) {
         self.init(data: NSData(contentsOfURL:url))
