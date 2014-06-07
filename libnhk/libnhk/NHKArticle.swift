@@ -12,6 +12,7 @@ class NHKArticle : NSObject {
     var permalink: NSURL?
     var title: String?
     var publishDate: String?
+    var arrangeDate: String?
     var identifier: String?
     var textBody: String?
     init() {

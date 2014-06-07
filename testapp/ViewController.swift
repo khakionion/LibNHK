@@ -10,19 +10,22 @@ import Cocoa
 import libnhk
 
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+    @IBOutlet var newsIDLabel : NSTextField
+    @IBOutlet var arrangeDateLabel : NSTextField
+    @IBOutlet var publishDateLabel : NSTextField
     var news:NHKEasyNews?
-    @IBOutlet
-    var newsListController:NSArrayController?
-    @IBOutlet
-    var tableView:NSTableView
+    @IBOutlet var newsListController:NSArrayController?
+    @IBOutlet var tableView:NSTableView
+    @IBOutlet var linkLabel : NSTextField
     override func viewDidLoad() {
         super.viewDidLoad()
+        let center = NSNotificationCenter.defaultCenter()
+        center.addObserver(self, selector:"loadNewsData:", name:"PressedRefreshButton", object: nil)
     }
     
     override func awakeFromNib() {
     }
-    @IBAction
-    func loadNewsData(sender:AnyObject?) {
+    @IBAction func loadNewsData(sender:AnyObject?) {
         let mainBundle = NSBundle.mainBundle()
         let nhkURL:NSURL = mainBundle.URLForResource("news-list", withExtension:"json")
         news = NHKEasyNews(URL: nhkURL)
@@ -35,6 +38,23 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         }
         return self.news!.articleStore!.count
     }
+    func tableViewSelectionDidChange(notification: NSNotification!) {
+        //grab the article
+        let tableView:NSTableView = notification.object as NSTableView
+        let selectedRow = tableView.selectedRow
+        let selectedArticle:NHKArticle! = news!.articleAtIndex(selectedRow)
+        //set the Identifier
+        let theID = selectedArticle.identifier
+        newsIDLabel.setTitleWithMnemonic(theID)
+        //set the dates
+        let publishString = selectedArticle.publishDate
+        publishDateLabel.setTitleWithMnemonic(publishString)
+        let arrangeString = selectedArticle.arrangeDate
+        arrangeDateLabel.setTitleWithMnemonic(arrangeString)
+        let linkString = selectedArticle.permalink
+        linkLabel.setTitleWithMnemonic(linkString!.absoluteString)
+    }
+    
     func tableView(tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject! {
         if self.news != nil {
             if self.news!.articleStore != nil {

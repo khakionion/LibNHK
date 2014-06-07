@@ -39,12 +39,20 @@ class NHKEasyNews: NSObject {
                 var article:NHKArticle = NHKArticle()
                 article.permalink = NSURL(string:nextArticle["news_web_url"]!)
                 article.title = nextArticle["title"]!
-                article.publishDate = nextArticle["news_prearranged_time"]!
+                article.arrangeDate = nextArticle["news_prearranged_time"]!
+                article.publishDate = nextArticle["news_publication_time"]!
                 article.identifier = nextArticle["news_id"]!
                 returnArray.append(article)
                 println(article.title)
             }
         }
         articleStore = returnArray
+    }
+    func articleAtIndex(index:Int!) -> NHKArticle? {
+        if articleStore != nil {
+            return self.articleStore![index]
+        }
+        return nil
+        
     }
 }

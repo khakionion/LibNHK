@@ -5,19 +5,45 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
     </dependencies>
     <scenes>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="CleanWindow" customModule="testapp" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
                         <view key="contentView" id="O92-4t-NeX">
                             <rect key="frame" x="14" y="22" width="480" height="270"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </view>
+                        <toolbar key="toolbar" implicitIdentifier="78ABFB1D-6F2F-47EC-9601-9BAC673101B2" autosavesConfiguration="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="npq-D0-Q9F">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="C07742AE-0795-4A04-A0A9-851C908D68B2" label="" paletteLabel="" id="IY1-GB-zb9">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="82" height="32"/>
+                                    <size key="maxSize" width="141" height="43"/>
+                                    <button key="view" verticalHuggingPriority="750" id="A2S-VN-fJd">
+                                        <rect key="frame" x="0.0" y="14" width="141" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="ニュースを更新" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LxM-O8-qkJ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="refreshNews:" target="IQv-IB-iLA" id="Smf-3e-mnp"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="8Wr-mD-9LT"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="8Wr-mD-9LT"/>
+                                <toolbarItem reference="IY1-GB-zb9"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -31,13 +57,13 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="NSVisualEffectView">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView appearanceType="aqua" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeG-Vu-SHd">
+                            <scrollView appearanceType="aqua" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeG-Vu-SHd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
-                                <clipView key="contentView" ambiguous="YES" misplaced="YES" id="IVv-bK-eLN">
+                                <clipView key="contentView" id="IVv-bK-eLN">
                                     <rect key="frame" x="1" y="17" width="238" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -79,19 +105,78 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHr-wV-yc1">
-                                <rect key="frame" x="248" y="256" width="103" height="25"/>
-                                <buttonCell key="cell" type="roundTextured" title="ニュースを更新" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uSa-08-w11">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CRO-xK-4gq">
+                                <rect key="frame" x="246" y="263" width="186" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="w8Q-8M-83f"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Identifier" id="0qr-n3-PzC">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="loadNewsData:" target="XfG-lQ-9wD" id="vYj-EJ-rl1"/>
-                                </connections>
-                            </button>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dwn-VT-Mb3">
+                                <rect key="frame" x="246" y="238" width="186" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="aBy-mh-8dG"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arrange Date" id="wyK-vu-H74">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WUw-eY-hUF">
+                                <rect key="frame" x="246" y="213" width="186" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="uum-kD-Tge"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Publish Date" id="b2p-47-cEc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uRP-kP-uNi">
+                                <rect key="frame" x="246" y="186" width="186" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="Mqn-Rc-qMe"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Article Link" id="NUp-be-DZe">
+                                    <font key="font" size="13" name="HelveticaNeue"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="KeG-Vu-SHd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="A1q-b4-3uA"/>
+                            <constraint firstItem="CRO-xK-4gq" firstAttribute="leading" secondItem="KeG-Vu-SHd" secondAttribute="trailing" constant="8" symbolic="YES" id="BnT-sj-iWZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Dwn-VT-Mb3" secondAttribute="trailing" constant="20" symbolic="YES" id="DzK-jB-i3s"/>
+                            <constraint firstItem="CRO-xK-4gq" firstAttribute="leading" secondItem="KeG-Vu-SHd" secondAttribute="trailing" constant="8" symbolic="YES" id="JKd-V0-ZMT"/>
+                            <constraint firstItem="uRP-kP-uNi" firstAttribute="top" secondItem="WUw-eY-hUF" secondAttribute="bottom" constant="8" symbolic="YES" id="K2c-Xh-J9c"/>
+                            <constraint firstItem="WUw-eY-hUF" firstAttribute="top" secondItem="Dwn-VT-Mb3" secondAttribute="bottom" constant="8" symbolic="YES" id="OvB-yI-t9C"/>
+                            <constraint firstItem="uRP-kP-uNi" firstAttribute="top" secondItem="WUw-eY-hUF" secondAttribute="bottom" constant="8" symbolic="YES" id="QLg-Av-AAx"/>
+                            <constraint firstItem="WUw-eY-hUF" firstAttribute="top" secondItem="Dwn-VT-Mb3" secondAttribute="bottom" constant="8" symbolic="YES" id="Uef-79-WfT"/>
+                            <constraint firstAttribute="trailing" secondItem="WUw-eY-hUF" secondAttribute="trailing" constant="20" symbolic="YES" id="ZVw-a8-bxs"/>
+                            <constraint firstItem="CRO-xK-4gq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="aqf-Dg-vnx"/>
+                            <constraint firstItem="uRP-kP-uNi" firstAttribute="leading" secondItem="KeG-Vu-SHd" secondAttribute="trailing" constant="8" symbolic="YES" id="daM-JD-yhu"/>
+                            <constraint firstItem="WUw-eY-hUF" firstAttribute="leading" secondItem="KeG-Vu-SHd" secondAttribute="trailing" constant="8" symbolic="YES" id="hZe-Nx-lFB"/>
+                            <constraint firstAttribute="trailing" secondItem="uRP-kP-uNi" secondAttribute="trailing" constant="20" symbolic="YES" id="n1r-Au-qRG"/>
+                            <constraint firstItem="KeG-Vu-SHd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="qaK-Tc-vu7"/>
+                            <constraint firstItem="Dwn-VT-Mb3" firstAttribute="leading" secondItem="KeG-Vu-SHd" secondAttribute="trailing" constant="8" symbolic="YES" id="qf7-mR-pif"/>
+                            <constraint firstItem="Dwn-VT-Mb3" firstAttribute="top" secondItem="CRO-xK-4gq" secondAttribute="bottom" constant="8" symbolic="YES" id="raK-aV-Bdz"/>
+                            <constraint firstItem="Dwn-VT-Mb3" firstAttribute="top" secondItem="CRO-xK-4gq" secondAttribute="bottom" constant="8" symbolic="YES" id="sUN-Sj-Dgr"/>
+                            <constraint firstAttribute="trailing" secondItem="CRO-xK-4gq" secondAttribute="trailing" constant="20" symbolic="YES" id="v3K-fR-sPD"/>
+                            <constraint firstAttribute="bottom" secondItem="KeG-Vu-SHd" secondAttribute="bottom" id="zfs-Ql-Tbr"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="arrangeDateLabel" destination="Dwn-VT-Mb3" id="QTT-CK-6zL"/>
+                        <outlet property="linkLabel" destination="uRP-kP-uNi" id="Bw9-TX-wOP"/>
+                        <outlet property="newsIDLabel" destination="CRO-xK-4gq" id="WZd-lE-eAk"/>
+                        <outlet property="publishDateLabel" destination="WUw-eY-hUF" id="emg-7n-HVy"/>
                         <outlet property="tableView" destination="hPd-LL-YQL" id="exB-AN-ess"/>
                     </connections>
                 </viewController>
