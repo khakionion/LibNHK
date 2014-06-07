@@ -27,8 +27,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     @IBAction func loadNewsData(sender:AnyObject?) {
         let mainBundle = NSBundle.mainBundle()
-        let nhkURL:NSURL = mainBundle.URLForResource("news-list", withExtension:"json")
-        news = NHKEasyNews(URL: nhkURL)
+        let failsafeURL:NSURL = mainBundle.URLForResource("news-list", withExtension:"json")
+        news = NHKEasyNews(/*URL: failsafeURL*/)
         self.tableView.reloadData()
     }
     

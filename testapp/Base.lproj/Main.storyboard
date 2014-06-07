@@ -13,7 +13,7 @@
                         <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
                         <view key="contentView" id="O92-4t-NeX">
                             <rect key="frame" x="14" y="22" width="480" height="270"/>
                             <autoresizingMask key="autoresizingMask"/>
@@ -60,7 +60,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView appearanceType="aqua" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeG-Vu-SHd">
+                            <scrollView appearanceType="aqua" horizontalCompressionResistancePriority="1000" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeG-Vu-SHd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                                 <clipView key="contentView" id="IVv-bK-eLN">
                                     <rect key="frame" x="1" y="17" width="238" height="117"/>
@@ -95,6 +95,10 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="DJl-7T-K8Q"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="Ku9-d9-DQX"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Sug-z9-tSK">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -140,7 +144,7 @@
                             <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uRP-kP-uNi" customClass="ClickableLabel" customModule="testapp" customModuleProvider="target">
                                 <rect key="frame" x="246" y="186" width="186" height="19"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="Mqn-Rc-qMe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="900" constant="182" id="Mqn-Rc-qMe"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Article Link" id="NUp-be-DZe">
                                     <font key="font" size="13" name="HelveticaNeue"/>
