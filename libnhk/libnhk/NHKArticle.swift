@@ -9,16 +9,25 @@
 import Foundation
 
 class NHKArticle : NSObject {
-    struct NHKArticleInfo {
-        var permalink: NSURL
-        var title: String
-        var publishDate: String
-        var identifier: String
-    }
-    var info: NHKArticleInfo!
+    var permalink: NSURL?
+    var title: String?
+    var publishDate: String?
+    var identifier: String?
     var textBody: String?
-    init(info:NHKArticleInfo) {
-        self.info = info
+    init() {
+        self.permalink = nil
+        self.title = nil
+        self.publishDate = nil
+        self.identifier = nil
         textBody = nil
+    }
+    var articleTitle:NSString {
+    get {
+        println("Returning \(self.title)")
+        if self.title != nil {
+            return self.title!
+        }
+        return "NOTHING"
+    }
     }
 }

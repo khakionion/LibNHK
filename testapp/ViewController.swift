@@ -9,10 +9,12 @@
 import Cocoa
 import libnhk
 
-class ViewController: NSViewController {
-    var myNews:NHKEasyNews?
+class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+    var news:NHKEasyNews?
     @IBOutlet
     var newsListController:NSArrayController?
+    @IBOutlet
+    var tableView:NSTableView
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,11 +27,28 @@ class ViewController: NSViewController {
     }
     
     override func awakeFromNib() {
+    }
+    @IBAction
+    func loadNewsData(sender:AnyObject?) {
         let mainBundle = NSBundle.mainBundle()
         let nhkURL:NSURL = mainBundle.URLForResource("news-list", withExtension:"json")
-        myNews = NHKEasyNews(URL: nhkURL)
+        news = NHKEasyNews(URL: nhkURL)
+        self.tableView.reloadData()
     }
-
-
+    
+    func numberOfRowsInTableView(tableView: NSTableView!) -> Int {
+        if self.news == nil {
+            return 0
+        }
+        return self.news!.articleStore!.count
+    }
+    func tableView(tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject! {
+        if self.news != nil {
+            if self.news!.articleStore != nil {
+                return self.news!.articleStore![row].title
+            }
+        }
+        return "NOTHING"
+    }
 }
 
