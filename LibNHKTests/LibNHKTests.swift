@@ -32,6 +32,5 @@ class libnhkTests: XCTestCase {
         let newsObj:NHKEasyNews = NHKEasyNews(data:testData)
         XCTAssert((newsObj.articleStore != nil))
         XCTAssert(newsObj.articleStore!.count > 0)
-        println(newsObj.articleStore)
     }    
 }

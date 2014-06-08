@@ -24,7 +24,6 @@ class NHKArticle : NSObject {
     }
     var articleTitle:NSString {
     get {
-        println("Returning \(self.title)")
         if self.title != nil {
             return self.title!
         }
