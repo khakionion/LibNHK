@@ -25,7 +25,7 @@ class NHKEasyNews: NSObject {
         self.init(data: NSData(contentsOfURL:url))
     }
     convenience init() {
-        let easyURL:NSURL = NSURL(string: "http://www3.nhk.or.jp/news/easy/news-list.json")
+        let easyURL:NSURL = NSURL(string: "https://www.nhk.or.jp/news/easy/news-list.json")
         self.init(URL:easyURL)
     }
     func processData(data:NSData) {
