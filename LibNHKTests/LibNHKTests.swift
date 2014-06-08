@@ -22,15 +22,13 @@ class libnhkTests: XCTestCase {
     }
     
     func testArticleLoading() {
-        var nhkBundle:NSBundle? = nil
-        var fwList = NSBundle.allFrameworks()
-        for nextFramework:AnyObject in fwList {
-            println(nextFramework)
-        }
         //let testURL:NSURL = bundle.URLForResource("news-list", withExtension:"json")
-        let testData:NSData = NSData(contentsOfFile:"/Users/michaelh/Desktop/news-list.json")
-        let newsObj:NHKEasyNews = NHKEasyNews(data:testData)
+        //let testData:NSData = NSData(contentsOfFile:"/Users/michaelh/Desktop/news-list.json")
+        let newsObj:NHKEasyNews = NHKEasyNews()
         XCTAssert((newsObj.articleStore != nil))
         XCTAssert(newsObj.articleStore!.count > 0)
+        for nextArticle:NHKArticle in newsObj.articleStore! {
+            //println("Next article: " + nextArticle.title!)
+        }
     }    
 }
