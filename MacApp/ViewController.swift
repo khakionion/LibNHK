@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import libnhk
+import LibNHK
 
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet var newsIDLabel : NSTextField

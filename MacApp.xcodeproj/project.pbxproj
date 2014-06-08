@@ -13,6 +13,7 @@
 		7418BAF1193D5F1800F47A7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7418BAF0193D5F1800F47A7F /* Images.xcassets */; };
 		7418BAF4193D5F1800F47A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7418BAF2193D5F1800F47A7F /* Main.storyboard */; };
 		74B02F1E194303E100D4F060 /* ClickableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B02F1D194303E100D4F060 /* ClickableLabel.swift */; };
+		74D52D3B1944398800B639FB /* LibNHK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D52D3A1944398800B639FB /* LibNHK.framework */; };
 		74E6D2881942FCA700DA6CEC /* CleanWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D2871942FCA700DA6CEC /* CleanWindow.swift */; };
 		74FB02A119403D7300E9069D /* news-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 74FB02A019403D7300E9069D /* news-list.json */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		7418BAF3193D5F1800F47A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7418BB09193D5FBA00F47A7F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		74B02F1D194303E100D4F060 /* ClickableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickableLabel.swift; sourceTree = "<group>"; };
+		74D52D3A1944398800B639FB /* LibNHK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibNHK.framework; path = "../../Library/Developer/Xcode/DerivedData/LibNHK-baojfvxlqpboewdpzmbjlugnhezz/Build/Products/Debug/LibNHK.framework"; sourceTree = "<group>"; };
 		74E6D2871942FCA700DA6CEC /* CleanWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanWindow.swift; sourceTree = "<group>"; };
 		74FB02A019403D7300E9069D /* news-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "news-list.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D52D3B1944398800B639FB /* LibNHK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		7418BADC193D5F1800F47A7F = {
 			isa = PBXGroup;
 			children = (
+				74D52D3A1944398800B639FB /* LibNHK.framework */,
 				7418BAE7193D5F1800F47A7F /* MacApp */,
 				7418BAE6193D5F1800F47A7F /* Products */,
 			);
@@ -257,6 +261,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LibNHK-baojfvxlqpboewdpzmbjlugnhezz/Build/Products/Debug",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -268,6 +276,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LibNHK-baojfvxlqpboewdpzmbjlugnhezz/Build/Products/Debug",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

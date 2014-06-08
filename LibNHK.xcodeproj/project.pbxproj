@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		74343068193EB6920054C49D /* NHKArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74343067193EB6920054C49D /* NHKArticle.swift */; };
-		749789FC193D7D5C0025EF60 /* libnhk.h in Headers */ = {isa = PBXBuildFile; fileRef = 749789FB193D7D5C0025EF60 /* libnhk.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74978A02193D7D5C0025EF60 /* libnhk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749789F6193D7D5C0025EF60 /* libnhk.framework */; };
-		74978A09193D7D5C0025EF60 /* libnhkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74978A08193D7D5C0025EF60 /* libnhkTests.swift */; };
+		749789FC193D7D5C0025EF60 /* LibNHK.h in Headers */ = {isa = PBXBuildFile; fileRef = 749789FB193D7D5C0025EF60 /* LibNHK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74978A02193D7D5C0025EF60 /* LibNHK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749789F6193D7D5C0025EF60 /* LibNHK.framework */; };
+		74978A09193D7D5C0025EF60 /* LibNHKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74978A08193D7D5C0025EF60 /* LibNHKTests.swift */; };
 		74978A1D193D7DA60025EF60 /* NHKEasyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74978A1C193D7DA60025EF60 /* NHKEasyNews.swift */; };
 		7498A214193EA3F000FCB309 /* news-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 7498A213193EA3F000FCB309 /* news-list.json */; };
 /* End PBXBuildFile section */
@@ -23,16 +23,37 @@
 			remoteGlobalIDString = 749789F5193D7D5C0025EF60;
 			remoteInfo = libnhk;
 		};
+		74D52D361944395D00B639FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 749789ED193D7D5C0025EF60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 749789F5193D7D5C0025EF60;
+			remoteInfo = LibNHK;
+		};
+		74D52D381944395D00B639FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 749789ED193D7D5C0025EF60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 749789F5193D7D5C0025EF60;
+			remoteInfo = LibNHK;
+		};
+		74D52D3C194439E500B639FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 749789ED193D7D5C0025EF60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 749789F5193D7D5C0025EF60;
+			remoteInfo = LibNHK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		74343067193EB6920054C49D /* NHKArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKArticle.swift; sourceTree = "<group>"; };
-		749789F6193D7D5C0025EF60 /* libnhk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libnhk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		749789F6193D7D5C0025EF60 /* LibNHK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LibNHK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		749789FA193D7D5C0025EF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		749789FB193D7D5C0025EF60 /* libnhk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libnhk.h; sourceTree = "<group>"; };
-		74978A01193D7D5C0025EF60 /* libnhkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libnhkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		749789FB193D7D5C0025EF60 /* LibNHK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibNHK.h; sourceTree = "<group>"; };
+		74978A01193D7D5C0025EF60 /* LibNHKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibNHKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74978A07193D7D5C0025EF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74978A08193D7D5C0025EF60 /* libnhkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libnhkTests.swift; sourceTree = "<group>"; };
+		74978A08193D7D5C0025EF60 /* LibNHKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibNHKTests.swift; sourceTree = "<group>"; };
 		74978A1C193D7DA60025EF60 /* NHKEasyNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKEasyNews.swift; sourceTree = "<group>"; };
 		7498A213193EA3F000FCB309 /* news-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "news-list.json"; sourceTree = "<group>"; };
 		74F46C11193EED1400F0EEA1 /* NHKPlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NHKPlay.playground; sourceTree = "<group>"; };
@@ -50,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74978A02193D7D5C0025EF60 /* libnhk.framework in Frameworks */,
+				74978A02193D7D5C0025EF60 /* LibNHK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +81,8 @@
 		749789EC193D7D5C0025EF60 = {
 			isa = PBXGroup;
 			children = (
-				749789F8193D7D5C0025EF60 /* libnhk */,
-				74978A05193D7D5C0025EF60 /* libnhkTests */,
+				749789F8193D7D5C0025EF60 /* LibNHK */,
+				74978A05193D7D5C0025EF60 /* LibNHKTests */,
 				749789F7193D7D5C0025EF60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,21 +90,22 @@
 		749789F7193D7D5C0025EF60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				749789F6193D7D5C0025EF60 /* libnhk.framework */,
-				74978A01193D7D5C0025EF60 /* libnhkTests.xctest */,
+				749789F6193D7D5C0025EF60 /* LibNHK.framework */,
+				74978A01193D7D5C0025EF60 /* LibNHKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		749789F8193D7D5C0025EF60 /* libnhk */ = {
+		749789F8193D7D5C0025EF60 /* LibNHK */ = {
 			isa = PBXGroup;
 			children = (
 				7498A213193EA3F000FCB309 /* news-list.json */,
-				749789FB193D7D5C0025EF60 /* libnhk.h */,
+				749789FB193D7D5C0025EF60 /* LibNHK.h */,
 				749789F9193D7D5C0025EF60 /* Supporting Files */,
 				74978A1C193D7DA60025EF60 /* NHKEasyNews.swift */,
 				74343067193EB6920054C49D /* NHKArticle.swift */,
 			);
+			name = LibNHK;
 			path = libnhk;
 			sourceTree = "<group>";
 		};
@@ -95,13 +117,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		74978A05193D7D5C0025EF60 /* libnhkTests */ = {
+		74978A05193D7D5C0025EF60 /* LibNHKTests */ = {
 			isa = PBXGroup;
 			children = (
-				74978A08193D7D5C0025EF60 /* libnhkTests.swift */,
+				74978A08193D7D5C0025EF60 /* LibNHKTests.swift */,
 				74978A06193D7D5C0025EF60 /* Supporting Files */,
 				74F46C11193EED1400F0EEA1 /* NHKPlay.playground */,
 			);
+			name = LibNHKTests;
 			path = libnhkTests;
 			sourceTree = "<group>";
 		};
@@ -120,16 +143,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749789FC193D7D5C0025EF60 /* libnhk.h in Headers */,
+				749789FC193D7D5C0025EF60 /* LibNHK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		749789F5193D7D5C0025EF60 /* libnhk */ = {
+		749789F5193D7D5C0025EF60 /* LibNHK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74978A0C193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "libnhk" */;
+			buildConfigurationList = 74978A0C193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "LibNHK" */;
 			buildPhases = (
 				749789F1193D7D5C0025EF60 /* Sources */,
 				749789F2193D7D5C0025EF60 /* Frameworks */,
@@ -140,14 +163,14 @@
 			);
 			dependencies = (
 			);
-			name = libnhk;
+			name = LibNHK;
 			productName = libnhk;
-			productReference = 749789F6193D7D5C0025EF60 /* libnhk.framework */;
+			productReference = 749789F6193D7D5C0025EF60 /* LibNHK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		74978A00193D7D5C0025EF60 /* libnhkTests */ = {
+		74978A00193D7D5C0025EF60 /* LibNHKTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74978A0F193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "libnhkTests" */;
+			buildConfigurationList = 74978A0F193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "LibNHKTests" */;
 			buildPhases = (
 				749789FD193D7D5C0025EF60 /* Sources */,
 				749789FE193D7D5C0025EF60 /* Frameworks */,
@@ -157,10 +180,13 @@
 			);
 			dependencies = (
 				74978A04193D7D5C0025EF60 /* PBXTargetDependency */,
+				74D52D371944395D00B639FB /* PBXTargetDependency */,
+				74D52D391944395D00B639FB /* PBXTargetDependency */,
+				74D52D3D194439E500B639FB /* PBXTargetDependency */,
 			);
-			name = libnhkTests;
+			name = LibNHKTests;
 			productName = libnhkTests;
-			productReference = 74978A01193D7D5C0025EF60 /* libnhkTests.xctest */;
+			productReference = 74978A01193D7D5C0025EF60 /* LibNHKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 749789F0193D7D5C0025EF60 /* Build configuration list for PBXProject "libnhk" */;
+			buildConfigurationList = 749789F0193D7D5C0025EF60 /* Build configuration list for PBXProject "LibNHK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,8 +219,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				749789F5193D7D5C0025EF60 /* libnhk */,
-				74978A00193D7D5C0025EF60 /* libnhkTests */,
+				749789F5193D7D5C0025EF60 /* LibNHK */,
+				74978A00193D7D5C0025EF60 /* LibNHKTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74978A09193D7D5C0025EF60 /* libnhkTests.swift in Sources */,
+				74978A09193D7D5C0025EF60 /* LibNHKTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +266,23 @@
 /* Begin PBXTargetDependency section */
 		74978A04193D7D5C0025EF60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 749789F5193D7D5C0025EF60 /* libnhk */;
+			target = 749789F5193D7D5C0025EF60 /* LibNHK */;
 			targetProxy = 74978A03193D7D5C0025EF60 /* PBXContainerItemProxy */;
+		};
+		74D52D371944395D00B639FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 749789F5193D7D5C0025EF60 /* LibNHK */;
+			targetProxy = 74D52D361944395D00B639FB /* PBXContainerItemProxy */;
+		};
+		74D52D391944395D00B639FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 749789F5193D7D5C0025EF60 /* LibNHK */;
+			targetProxy = 74D52D381944395D00B639FB /* PBXContainerItemProxy */;
+		};
+		74D52D3D194439E500B639FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 749789F5193D7D5C0025EF60 /* LibNHK */;
+			targetProxy = 74D52D3C194439E500B639FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -401,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		749789F0193D7D5C0025EF60 /* Build configuration list for PBXProject "libnhk" */ = {
+		749789F0193D7D5C0025EF60 /* Build configuration list for PBXProject "LibNHK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74978A0A193D7D5C0025EF60 /* Debug */,
@@ -410,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74978A0C193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "libnhk" */ = {
+		74978A0C193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "LibNHK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74978A0D193D7D5C0025EF60 /* Debug */,
@@ -419,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74978A0F193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "libnhkTests" */ = {
+		74978A0F193D7D5C0025EF60 /* Build configuration list for PBXNativeTarget "LibNHKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74978A10193D7D5C0025EF60 /* Debug */,

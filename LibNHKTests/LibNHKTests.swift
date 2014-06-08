@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import libnhk
+import LibNHK
 
 class libnhkTests: XCTestCase {
     

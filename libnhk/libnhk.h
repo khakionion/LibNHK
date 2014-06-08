@@ -1,6 +1,6 @@
 //
-//  libnhk.h
-//  libnhk
+//  LibNHK.h
+//  LibNHK
 //
 //  Created by Michael Herring on 2014/06/03.
 //  Copyright (c) 2014年 Michael Herring. All rights reserved.
