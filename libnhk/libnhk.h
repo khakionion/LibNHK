@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 Michael Herring. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for libnhk.
 FOUNDATION_EXPORT double libnhkVersionNumber;
