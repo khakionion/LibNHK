@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import LibNHKios
 
 class DetailViewController: UIViewController, UISplitViewControllerDelegate {
 
     @IBOutlet var detailDescriptionLabel: UILabel
+    @IBOutlet var detailArrangeLabel : UILabel
+    @IBOutlet var detailPublishLabel : UILabel
+    @IBOutlet var detailURLLabel : UILabel
     var masterPopoverController: UIPopoverController? = nil
 
 
@@ -27,9 +31,18 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
+        if let detail: NHKArticle = self.detailItem as? NHKArticle {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+                label.text = detail.identifier
+            }
+            if let label = self.detailArrangeLabel {
+                label.text = detail.arrangeDate
+            }
+            if let label = self.detailPublishLabel {
+                label.text = detail.publishDate
+            }
+            if let label = self.detailURLLabel {
+                label.text = detail.permalink!.absoluteString
             }
         }
     }

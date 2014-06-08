@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import LibNHKios
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var news:NHKEasyNews?
     var window: UIWindow?
 
 

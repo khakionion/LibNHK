@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7428F1D019448F400008142B /* LibNHKios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428F1CF19448F400008142B /* LibNHKios.framework */; };
+		7428F227194492100008142B /* LibNHKios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428F226194492100008142B /* LibNHKios.framework */; };
 		74D52DC419443E0A00B639FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D52DC319443E0A00B639FB /* AppDelegate.swift */; };
 		74D52DC619443E0A00B639FB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D52DC519443E0A00B639FB /* MasterViewController.swift */; };
 		74D52DC819443E0A00B639FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D52DC719443E0A00B639FB /* DetailViewController.swift */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7428F1CF19448F400008142B /* LibNHKios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibNHKios.framework; path = "../build/Debug-iphoneos/LibNHKios.framework"; sourceTree = "<group>"; };
+		7428F226194492100008142B /* LibNHKios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibNHKios.framework; path = "../build/Debug-iphoneos/LibNHKios.framework"; sourceTree = "<group>"; };
 		74D52DBE19443E0A00B639FB /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D52DC219443E0A00B639FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D52DC319443E0A00B639FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7428F1D019448F400008142B /* LibNHKios.framework in Frameworks */,
+				7428F227194492100008142B /* LibNHKios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +41,7 @@
 		74D52DB519443E0A00B639FB = {
 			isa = PBXGroup;
 			children = (
-				7428F1CF19448F400008142B /* LibNHKios.framework */,
+				7428F226194492100008142B /* LibNHKios.framework */,
 				74D52DC019443E0A00B639FB /* iOSApp */,
 				74D52DBF19443E0A00B639FB /* Products */,
 			);
